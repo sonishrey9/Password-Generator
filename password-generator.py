@@ -1,7 +1,14 @@
 import string
 import  random
+from datetime import datetime as d
 
 if __name__ == '__main__':
+
+    def time_and_date():  # function o take time and date input from user
+
+        date = d.now()
+
+        return date.strftime("%d-%m-%Y , %S:%M:%H")
 
     def password_generator():
 
@@ -31,7 +38,7 @@ if __name__ == '__main__':
             with open("password.csv", "a+") as password:
                 password.write(f" {username}, {mypassword} , {website} \n")
                 print(f" Details are"
-                      f"{username}, {mypassword} , {website} \n")
+                      f"{username}, {mypassword} , {website}, {time_and_date()} \n")
 
             answer = input("Do you Wish to continue, Type Y for yes, N for No")
 
