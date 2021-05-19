@@ -19,9 +19,9 @@ if __name__ == '__main__':
             s4 = string.punctuation
 
             #username, website, password
-            username = input("enter the username")
-            website = input("enter the website")
-            plen = int(input("enter password length \n "))
+            username = input("ENTER USERNAME : \n")
+            website = input("ENTER WEBSITE : \n")
+            plen = int(input("ENTER PASSWORD LENGTH : \n "))
 
             s = [] # empyty listto feed all values stored in s
             s.extend(list(s1))
@@ -36,9 +36,15 @@ if __name__ == '__main__':
 
             #writing the password generator into csv file
             with open("password.csv", "a+") as password:
-                password.write(f" {username}, {mypassword} , {website} \n")
-                print(f" Details are"
-                      f"{username}, {mypassword} , {website}, {time_and_date()} \n")
+                password.write(f" {username}, {mypassword} , {website}, {time_and_date()} \n")
+                print(f" Details are \n"
+                      f"USERNAME : {username} \n"
+                      f"PASSWORD : {mypassword} \n"
+                      f"WEBSITE : {website} \n"
+                      f"DATE & TIME : {time_and_date()} \n")
+
+            print(f"YOUR PASSWORD IS \n"
+                  f"{mypassword}")
 
             answer = input("Do you Wish to continue, Type Y for yes, N for No")
 
